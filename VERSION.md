@@ -1,6 +1,6 @@
 # Version History
 
-## v1.0.0 (2026-10-31)
+## v0.0.1 (2026-10-31)
 - Initial release of the Destiny lore archive
 - 109 ingested books + 68 Drifter transcripts
 - Master index, cross-reference, quote index, speech pattern analysis

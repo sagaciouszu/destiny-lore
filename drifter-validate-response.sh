@@ -95,7 +95,7 @@ echo ""
 echo "Score: $SCORE/$MAX_SCORE ($PCT%)"
 echo ""
 
-if [ "$PCT" -ge 50 ]; then
+if [ "$PCT" -ge 70 ]; then
     echo "✓ PASS: Sounds like the Drifter"
 elif [ "$PCT" -ge 50 ]; then
     echo "⚠ PARTIAL: Some Drifter elements present"

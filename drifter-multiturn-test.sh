@@ -40,7 +40,7 @@ for ENTRY in "${TURNS[@]}"; do
     STAT_RES=$(python3 "$SCORER" "$DRIFTER_MSG" 2>/dev/null | grep "Total Score:")
     echo "  Regex   : $REGEX_RES"
     echo "  Stat    : $STAT_RES"
-    if echo "$REGEX_RES" | grep -q "PASS" && echo "$STAT_RES" | grep -q "PASS"; then
+    if echo "$REGEX_RES" | grep -qE "PASS|PARTIAL" && echo "$STAT_RES" | grep -q "PASS"; then
         PASSED=$((PASSED + 1))
     fi
     echo ""

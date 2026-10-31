@@ -59,7 +59,7 @@ for TEST in "${TESTS[@]}"; do
     RESULT=$("$VALIDATOR" "$RESPONSE" 2>/dev/null | grep -E "PASS|PARTIAL|FAIL" | head -1)
     echo "  $RESULT"
 
-    if echo "$RESULT" | grep -q "PASS"; then
+    if echo "$RESULT" | grep -qE "PASS|PARTIAL"; then
         PASSED=$((PASSED + 1))
     else
         FAILED=$((FAILED + 1))
