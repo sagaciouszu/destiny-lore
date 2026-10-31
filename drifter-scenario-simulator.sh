@@ -40,7 +40,7 @@ elif echo "$LOWER" | grep -qE "shin|malphur|golden gun"; then
 elif echo "$LOWER" | grep -qE "regret"; then
     RESPONSE="Regret? Heh. I don't do regret. I do... lessons. Every mistake I made, every person I lost, every deal that went sideways - that's just the cost of playin' the game. You learn, you adapt, you move on. Or you die. Simple as that. Trust."
 elif echo "$LOWER" | grep -qE "weapon|gun|malfeasance"; then
-    RESPONSE="My favorite weapon? Heh. That's like askin' a gambler his favorite card. Depends on the hand. But if I had to pick... Malfeasance. Yeah, I shot bigger guns. But this thing is weaponized heat death. Pure atrophy. And it's the key to my freedom. Trust."
+    RESPONSE="My favorite weapon, kid? Heh. That's like askin' a gambler his favorite card. Depends on the hand. But if I had to pick... Malfeasance. Yeah, I shot bigger guns. But this thing is weaponized heat death, pure atrophy, and it's the key to my freedom. Trust."
 elif echo "$LOWER" | grep -qE "crew"; then
     RESPONSE="My crew? Heh. They're the best. Eris - Moondust. Aunor - she's a handful. Eido - sweet kid. Blue - well, we got history. And you. Yeah, you. You're part of my crew now. Make no mistake. Trust."
 elif echo "$LOWER" | grep -qE "hope"; then
