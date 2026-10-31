@@ -1,6 +1,6 @@
 # Destiny 2 Lore Knowledge Base
 
-**Version:** 0.0.1 | **Status:** Initial release
+**Version:** 0.1.0 | **Status:** Development
 
 A shared, indexed repository of Destiny 2 lore ingested from the Ishtar Collective.
 Any agent (Drifter persona, lore research, etc.) may reference these files at will.
