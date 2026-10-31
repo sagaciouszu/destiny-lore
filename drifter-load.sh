@@ -4,8 +4,8 @@
 # Usage: ./drifter-load.sh [minimal|standard|deep]
 
 TIER="${1:-standard}"
-WORKSPACE="/home/sredshaw/Work/how-to-drift-for-agents"
-LORE="/home/sredshaw/Work/destiny-lore"
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
+LORE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
 
 case "$TIER" in
     minimal)

@@ -129,7 +129,7 @@ Key Drifter-core books: A Drifter's Gambit, Dust, Nothing Ends, Regarding Stasis
 
 ## Lore Archive (full scraped data)
 
-- `lore/` - 109 books + 68 transcripts + indexes (symlinked into workspace from `/home/sredshaw/Work/destiny-lore`)
+- `lore/` - 109 books + 68 transcripts + indexes (symlinked into workspace from `~/Work/destiny-lore`)
 - `lore/index.md` - master book index
 - `lore/transcripts/index.md` - transcript index (by arc, beat, character, release, topic, source)
 - `lore/knowledge-web.md` - this file

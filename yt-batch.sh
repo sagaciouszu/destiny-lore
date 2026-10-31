@@ -3,8 +3,8 @@
 # Processes multiple YouTube videos and saves transcripts
 # Usage: ./yt-batch.sh <url1> <url2> ... OR ./yt-batch.sh --file urls.txt
 
-OUTPUT_DIR="/home/sredshaw/Work/destiny-lore/transcripts"
-SCRIPT_DIR="/home/sredshaw/Work/destiny-lore"
+OUTPUT_DIR="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/transcripts"
+SCRIPT_DIR="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
 
 if [ "$1" = "--file" ] && [ -n "$2" ]; then
     URLS=$(cat "$2")

@@ -2,8 +2,8 @@
 # Drifter Master Audit — runs ALL checks and prints a unified scorecard
 # Usage: ./drifter-master-audit-all.sh
 
-ARCHIVE="/home/sredshaw/Work/destiny-lore"
-WORKSPACE="/home/sredshaw/Work/how-to-drift-for-agents"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
 
 PASS=0; FAIL=0; TOTAL=0
 run() {

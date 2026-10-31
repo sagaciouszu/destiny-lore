@@ -1,5 +1,5 @@
 #!/bin/bash
-ARCHIVE="/home/sredshaw/Work/destiny-lore"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
 VALIDATOR="$ARCHIVE/drifter-validate-response.sh"
 
 echo "=== DRIFTER AUTOMATED TEST SUITE ==="

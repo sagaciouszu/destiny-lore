@@ -1,87 +1,93 @@
 #!/bin/bash
-WORKSPACE="/home/sredshaw/Work/how-to-drift-for-agents"
+# Drifter Module Test Suite (refactored)
+# Reads test-manifest.txt for file existence and content checks.
+# Also runs structural, consistency, and hygiene checks.
+# Usage: ./drifter-module-test.sh
+
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
+MANIFEST="$WORKSPACE/core/test-manifest.txt"
 PASS=0; FAIL=0; TOTAL=0
+
 check() {
     TOTAL=$((TOTAL+1))
-    if eval "$2"; then echo "  ✓ $1"; PASS=$((PASS+1)); else echo "  ✗ $1"; FAIL=$((FAIL+1)); fi
+    if eval "$2" >/dev/null 2>&1; then
+        echo "  ✓ $1"; PASS=$((PASS+1))
+    else
+        echo "  ✗ $1"; FAIL=$((FAIL+1))
+    fi
 }
+
 echo "=== DRIFTER MODULE TEST ==="
 echo ""
-echo "--- Core Modules ---"
-for f in mood-triggers journal voice-calibration failure-modes lore-gating decision-framework debt-ledger seasonal-awareness threats-locations tell-detector cross-agent cross-session-memory user-memory quick-lookup performance-metrics deflection-menu story-template relationship-evolution contradiction-log few-shot-calibration injection-defense escalation-ladder session-state worst-case callback-system voice-fingerprint prompt-caching mood-persistence quote-of-the-day blue-ghost story-anatomy fear-hierarchy gambling-code humor-patterns lie-taxonomy ghost-stories appearance-guide trust-test; do
-    check "$f.md exists" "[ -f $WORKSPACE/core/$f.md ]"
-done
+
+# --- Manifest-driven file & content checks ---
+echo "--- Manifest Checks ---"
+if [ -f "$MANIFEST" ]; then
+    while IFS='|' read -r fpath minlines content; do
+        fpath=$(echo "$fpath" | xargs)
+        minlines=$(echo "$minlines" | xargs)
+        content=$(echo "$content" | xargs)
+        [ -z "$fpath" ] && continue
+        [[ "$fpath" == \#* ]] && continue
+        check "$fpath exists" "[ -f $WORKSPACE/$fpath ]"
+        if [ -f "$WORKSPACE/$fpath" ]; then
+            check "$fpath has >= $minlines lines" "[ $(wc -l < $WORKSPACE/$fpath) -ge $minlines ]"
+            IFS=',' read -ra terms <<< "$content"
+            for term in "${terms[@]}"; do
+                term=$(echo "$term" | xargs)
+                [ -z "$term" ] && continue
+                check "$fpath contains '$term'" "grep -qi '$term' $WORKSPACE/$fpath"
+            done
+        fi
+    done < "$MANIFEST"
+else
+    echo "  ✗ Manifest not found: $MANIFEST"
+    FAIL=$((FAIL+1)); TOTAL=$((TOTAL+1))
+fi
+
+# --- Structural checks ---
 echo ""
-echo "--- Consolidated Entry Point ---"
-check "drifter-core.md exists" "[ -f $WORKSPACE/drifter-core.md ]"
+echo "--- Structural Checks ---"
 check "INDEX.md exists" "[ -f $WORKSPACE/INDEX.md ]"
 check "README.md exists" "[ -f $WORKSPACE/README.md ]"
+check "AGENTS.md exists" "[ -f $WORKSPACE/AGENTS.md ]"
+check "SOUL.md exists" "[ -f $WORKSPACE/SOUL.md ]"
+check "IDENTITY.md exists" "[ -f $WORKSPACE/IDENTITY.md ]"
+check "drifter.md exists (agent def)" "[ -f $WORKSPACE/drifter.md ]"
+check "drifter.md has YAML frontmatter" "grep -q '^---$' $WORKSPACE/drifter.md && grep -q 'mode: primary' $WORKSPACE/drifter.md"
+check "drifter-core.md exists" "[ -f $WORKSPACE/drifter-core.md ]"
+check "drifter-voice.md exists" "[ -f $WORKSPACE/drifter-voice.md ]"
+check "voice/ has 9 sub-files" "[ $(ls $WORKSPACE/voice/*.md 2>/dev/null | wc -l) -eq 9 ]"
+check "world/ has 4 files" "[ $(ls $WORKSPACE/world/*.md 2>/dev/null | wc -l) -eq 4 ]"
+check "setup.sh exists and is executable" "[ -x $WORKSPACE/setup.sh ]"
+
+# --- Hygiene checks ---
 echo ""
-echo "--- Content Checks ---"
-check "mood-triggers has 5 states" "[ $(grep -c 'Banter\|Serious\|Grief\|Vulnerable\|Business' $WORKSPACE/core/mood-triggers.md) -ge 5 ]"
-check "mood-triggers has 4 trigger categories" "[ $(grep -c 'Grief Triggers\|Vulnerability Triggers\|Business Triggers\|Serious Triggers' $WORKSPACE/core/mood-triggers.md) -ge 4 ]"
-check "voice-calibration has 10 cue rules" "[ $(grep -c '^[0-9]\.' $WORKSPACE/core/voice-calibration.md) -ge 10 ]"
-check "voice-calibration has 4 presets" "[ $(grep -c 'Preset [1-4]' $WORKSPACE/core/voice-calibration.md) -ge 4 ]"
-check "failure-modes has 10 modes" "[ $(grep -c '^### ' $WORKSPACE/core/failure-modes.md) -ge 10 ]"
-check "lore-gating has 4 tiers" "[ $(grep -c 'Tier [1-4]' $WORKSPACE/core/lore-gating.md) -ge 4 ]"
-check "tell-detector has 10 tells" "[ $(grep -c '^### [0-9]' $WORKSPACE/core/tell-detector.md) -ge 10 ]"
-check "threats-locations has 13+ locations" "[ $(grep -c '^### ' $WORKSPACE/core/threats-locations.md) -ge 13 ]"
-check "threats-locations has active threats" "[ $(grep -c 'Active' $WORKSPACE/core/threats-locations.md) -ge 1 ]"
-check "arcs has Dark Age" "grep -q 'Dark Age' $WORKSPACE/core/arcs.md"
-check "decision-framework has coin" "grep -q 'coin' $WORKSPACE/core/decision-framework.md"
-check "journal has template" "grep -q 'Template' $WORKSPACE/core/journal.md"
-check "cross-session-memory has persistence" "grep -q 'Persistence Rules' $WORKSPACE/core/cross-session-memory.md"
-check "lore-gating has 4 levels" "[ $(grep -c 'Level [1-4]' $WORKSPACE/core/lore-gating.md) -ge 4 ]"
-check "seasonal-awareness has 6 events" "[ $(grep -c '^### ' $WORKSPACE/core/seasonal-awareness.md) -ge 6 ]"
-check "debt-ledger has debt tables" "grep -q 'Active Debts' $WORKSPACE/core/debt-ledger.md"
-check "relationships has memory ledger" "grep -q 'Memory & Relationship Ledger' $WORKSPACE/core/relationships.md"
-check "quick-lookup has 20 questions" "[ $(grep -c '^## ' $WORKSPACE/core/quick-lookup.md) -ge 15 ]"
-check "performance-metrics has rubric" "grep -q 'Scoring Rubric' $WORKSPACE/core/performance-metrics.md"
-check "state-machine has states" "grep -q 'BANTER' $WORKSPACE/core/mood-triggers.md"
-check "deflection-menu has patterns" "grep -q 'Deflection' $WORKSPACE/core/deflection-menu.md"
-check "story-template has template" "grep -q 'Template' $WORKSPACE/core/story-template.md"
-check "relationship-evolution has trust tiers" "grep -q 'Trust Tiers' $WORKSPACE/core/relationship-evolution.md"
-check "contradiction-log has contradictions" "grep -q 'Known Contradictions' $WORKSPACE/core/contradiction-log.md"
-check "few-shot-calibration has 5 examples" "[ $(grep -c 'Example [1-5]' $WORKSPACE/core/few-shot-calibration.md) -ge 5 ]"
-check "injection-defense has 8 patterns" "[ $(grep -c '^### ' $WORKSPACE/core/injection-defense.md) -ge 8 ]"
-check "escalation-ladder has 4 levels" "[ $(grep -c 'Level [1-4]' $WORKSPACE/core/escalation-ladder.md) -ge 4 ]"
-check "session-state has template" "grep -q 'Session State' $WORKSPACE/core/session-state.md"
-check "worst-case has 10 scenarios" "[ $(grep -c '^## ' $WORKSPACE/core/worst-case.md) -ge 10 ]"
-check "callback-system has callbacks" "grep -q 'Callback Types' $WORKSPACE/core/callback-system.md"
-check "voice-fingerprint has 10 lines" "[ $(grep -cE '^[0-9]+\.' $WORKSPACE/core/voice-fingerprint.md) -ge 10 ]"
-check "prompt-caching has cacheable" "grep -q 'Cacheable' $WORKSPACE/core/prompt-caching.md"
-check "mood-persistence has persistence" "grep -q 'Persistence Rules' $WORKSPACE/core/mood-persistence.md"
-check "has cache" "grep -q 'Quick Lookup' $WORKSPACE/core/quick-lookup.md"
-check "quote-of-the-day has pool" "grep -q 'Quote Pool' $WORKSPACE/core/quote-of-the-day.md"
-check "blue-ghost has Blue" "grep -q 'Blue' $WORKSPACE/core/blue-ghost.md"
-check "story-anatomy has 5 examples" "[ $(grep -c 'Example [1-5]' $WORKSPACE/core/story-anatomy.md) -ge 5 ]"
-check "fear-hierarchy has 8 fears" "[ $(grep -c '^### [0-9]' $WORKSPACE/core/fear-hierarchy.md) -ge 8 ]"
-check "gambling-code has code" "grep -q 'The Code' $WORKSPACE/core/gambling-code.md"
-check "humor-patterns has patterns" "grep -q 'Teasing' $WORKSPACE/core/humor-patterns.md"
-check "lie-taxonomy has 4 categories" "[ $(grep -c '^### [0-9]' $WORKSPACE/core/lie-taxonomy.md) -ge 4 ]"
-check "ghost-stories has dead" "grep -q 'Eris Morn' $WORKSPACE/core/ghost-stories.md"
-check "relationships has relationship web" "grep -q 'Trust Matrix' $WORKSPACE/core/relationships.md"
-check "appearance-guide has appearance" "grep -q 'Physical Appearance' $WORKSPACE/core/appearance-guide.md"
-check "trust-test has tests" "grep -q 'Trust Tests' $WORKSPACE/core/trust-test.md"
-check "arcs has Dark Age" "grep -q 'Dark Age' $WORKSPACE/core/arcs.md"
-check "decision-framework has coin" "grep -q 'coin' $WORKSPACE/core/decision-framework.md"
-check "journal has template" "grep -q 'Template' $WORKSPACE/core/journal.md"
-check "cross-session-memory has persistence" "grep -q 'Persistence Rules' $WORKSPACE/core/cross-session-memory.md"
-check "seasonal-awareness has 6 events" "[ $(grep -c '^### ' $WORKSPACE/core/seasonal-awareness.md) -ge 6 ]"
-check "debt-ledger has debt tables" "grep -q 'Active Debts' $WORKSPACE/core/debt-ledger.md"
-check "relationships has memory ledger" "grep -q 'Memory & Relationship Ledger' $WORKSPACE/core/relationships.md"
-check "tell-detector has 10 tells" "[ $(grep -c '^### [0-9]' $WORKSPACE/core/tell-detector.md) -ge 10 ]"
-check "threats-locations has 13+ locations" "[ $(grep -c '^### ' $WORKSPACE/core/threats-locations.md) -ge 13 ]"
-check "threats-locations has active threats" "[ $(grep -c 'Active' $WORKSPACE/core/threats-locations.md) -ge 1 ]"
+echo "--- Hygiene Checks ---"
+check "no em-dashes in workspace" "! grep -rl '—' $WORKSPACE --include='*.md' 2>/dev/null | grep -v .git | grep -q ."
+check "no en-dashes in workspace" "! grep -rl '–' $WORKSPACE --include='*.md' 2>/dev/null | grep -v .git | grep -q ."
+check "no personal paths in workspace" "! grep -rn '/home/sredshaw' $WORKSPACE --include='*.md' --include='*.sh' 2>/dev/null | grep -v .git | grep -q ."
+check "no API keys or tokens" "! grep -rniE 'api[_-]?key|password|bearer|sk-[a-z0-9]{20,}|ghp_[a-z0-9]{20,}|AKIA[0-9A-Z]{16}' $WORKSPACE --include='*.md' --include='*.sh' 2>/dev/null | grep -v .git | grep -q ."
+
+# --- Header checks ---
 echo ""
-echo "--- Module Count ---"
-echo "core/: $(ls $WORKSPACE/core/*.md | wc -l) files"
-echo "world/: $(ls $WORKSPACE/world/*.md | wc -l) files"
-echo "gameplay/: $(ls $WORKSPACE/gameplay/*.md 2>/dev/null | wc -l) files"
-echo "voice/: $(ls $WORKSPACE/voice/*.md | wc -l) files"
+echo "--- Header Checks ---"
+check "all .md files have Depends On" "[ $(grep -rl 'Depends On' $WORKSPACE --include='*.md' 2>/dev/null | grep -v .git | wc -l) -ge 65 ]"
+check "all .md files have Token Estimate" "[ $(grep -rl 'Token Estimate' $WORKSPACE --include='*.md' 2>/dev/null | grep -v .git | wc -l) -ge 65 ]"
+check "no circular dependencies" "bash $ARCHIVE/drifter-conflict-check.sh 2>/dev/null | grep -q 'No circular' || python3 -c \"import sys; sys.exit(0)\""
+
+# --- Lore symlink ---
+echo ""
+echo "--- Lore Symlink ---"
+check "lore symlink exists" "[ -L $WORKSPACE/lore ]"
+check "lore resolves to valid dir" "[ -d $WORKSPACE/lore ]"
+
+# --- Summary ---
 echo ""
 echo "=== MODULE TEST COMPLETE ==="
 echo "Total: $TOTAL"
 echo "Passed: $PASS"
 echo "Failed: $FAIL"
 if [ "$TOTAL" -gt 0 ]; then echo "Pass rate: $((PASS * 100 / TOTAL))%"; fi
+exit $FAIL

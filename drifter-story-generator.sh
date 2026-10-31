@@ -5,7 +5,7 @@
 
 TOPIC="${*:-the Dark Age}"
 LOWER_TOPIC=$(echo "$TOPIC" | tr "[:upper:]" "[:lower:]")
-VALIDATOR="/home/sredshaw/Work/destiny-lore/drifter-validate-response.sh"
+VALIDATOR="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/drifter-validate-response.sh"
 
 echo "=== DRIFTER STORY GENERATOR ==="
 echo ""

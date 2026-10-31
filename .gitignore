@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.orig
+
+# Logs
+*.log

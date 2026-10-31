@@ -1,6 +1,6 @@
 #!/bin/bash
-ARCHIVE="/home/sredshaw/Work/destiny-lore"
-WORKSPACE="/home/sredshaw/Work/how-to-drift-for-agents"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
 
 echo "=== DRIFTER ARCHIVE VALIDATION ==="
 echo ""

@@ -3,7 +3,7 @@
 # Usage: ./drifter-search.sh "search term" [directory]
 # Searches all Drifter transcripts and agent files for matching quotes
 
-SEARCH_DIR="${2:-/home/sredshaw/Work/destiny-lore/transcripts}"
+SEARCH_DIR="${2:-${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/transcripts}"
 PATTERN="$1"
 
 if [ -z "$PATTERN" ]; then
@@ -13,7 +13,7 @@ if [ -z "$PATTERN" ]; then
     echo "Examples:"
     echo "  $0 \"bad ideas\""
     echo "  $0 \"moondust\""
-    echo "  $0 \"gambit\" /home/sredshaw/Work/how-to-drift-for-agents"
+    echo "  $0 \"gambit\" ${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
     exit 1
 fi
 
@@ -27,7 +27,7 @@ grep -rn -i "$PATTERN" "$SEARCH_DIR" --include="*.md" | head -50
 # Search agent files
 echo ""
 echo "--- AGENT FILES ---"
-grep -rn -i "$PATTERN" /home/sredshaw/Work/how-to-drift-for-agents --include="*.md" | head -30
+grep -rn -i "$PATTERN" ${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)} --include="*.md" | head -30
 
 echo ""
 echo "=== Search complete ==="

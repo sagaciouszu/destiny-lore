@@ -3,7 +3,7 @@
 # Feeds a Guardian input and outputs a Drifter-voice response.
 # Usage: ./drifter-scenario-simulator.sh "your question here"
 
-ARCHIVE="/home/sredshaw/Work/destiny-lore"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
 VALIDATOR="$ARCHIVE/drifter-validate-response.sh"
 
 INPUT="$*"

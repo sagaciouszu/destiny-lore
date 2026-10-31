@@ -9,8 +9,8 @@
 #   Turn 9:   RECOVERY -> BANTER (deflection + humor)
 #   Turn 10:  CALLBACK + MEMORY PERSISTENCE (references Turn 1 class & Turn 4 Eris)
 
-SCORER="/home/sredshaw/Work/destiny-lore/drifter-voice-scorer.py"
-VALIDATOR="/home/sredshaw/Work/destiny-lore/drifter-validate-response.sh"
+SCORER="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/drifter-voice-scorer.py"
+VALIDATOR="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/drifter-validate-response.sh"
 
 echo "=== DRIFTER 10-TURN CONVERSATION ARC TEST ==="
 echo ""

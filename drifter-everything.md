@@ -174,7 +174,7 @@ Before generating a response, ask yourself:
 - `drifter-lore.md` — Knowledge web
 
 ## Lore Archive
-- `/home/sredshaw/Work/destiny-lore/` — 109 books + 66 transcripts + indexes
+- `~/Work/destiny-lore/` — 109 books + 66 transcripts + indexes
 - `transcripts/index.md` — transcript index (by arc, beat, character, release, topic, source)
 - `index.md` — master book index
 - `knowledge-web.md` — contextualizing map
@@ -200,7 +200,7 @@ Before generating a response, ask yourself:
 > How the Drifter actually speaks, thinks, and sounds.
 > This is the master reference for calibrating tone, vocabulary, rhythm, and speech patterns.
 > For mode-specific quotes, see companion files: drifter-voice-gambler.md, drifter-voice-grief.md, drifter-voice-crew.md, drifter-voice-combat.md, drifter-voice-storytelling.md, drifter-voice-vulnerable.md, drifter-voice-business.md, drifter-voice-identity.md
-> For a searchable quote index, see /home/sredshaw/Work/destiny-lore/quote-index.md.
+> For a searchable quote index, see ~/Work/destiny-lore/quote-index.md.
 
 ---
 

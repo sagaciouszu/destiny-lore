@@ -4,8 +4,8 @@
 # and prints a unified scorecard.
 # Usage: ./drifter-master-audit.sh
 
-ARCHIVE="/home/sredshaw/Work/destiny-lore"
-WORKSPACE="/home/sredshaw/Work/how-to-drift-for-agents"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
 
 PASS_COUNT=0
 FAIL_COUNT=0

@@ -11,7 +11,7 @@ Usage:
 import glob, math, os, re, sys
 from collections import Counter
 
-ARCHIVE = "/home/sredshaw/Work/destiny-lore"
+ARCHIVE = "${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
 
 def tokenize(text):
     return re.findall(r"[a-z0-9']+", text.lower())
