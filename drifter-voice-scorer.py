@@ -22,16 +22,19 @@ def ngrams(tokens, n):
 def load_corpus():
     lines = []
     for p in glob.glob(os.path.join(ARCHIVE, "transcripts/*.md")):
-        for line in open(p, encoding="utf-8", errors="ignore"):
-            m = re.match(r"^\*(?:The )?Drifter:\*\s*(.*)$", line.strip())
-            if m:
-                lines.append(m.group(1).strip())
-        # Also include Destinypedia in-game quotes file lines
-        if os.path.basename(p) == "ingame-quotes-drifter-destinypedia.md":
+        basename = os.path.basename(p)
+        # Destinypedia in-game quotes: extract quoted Drifter lines
+        if basename == "ingame-quotes-drifter-destinypedia.md":
             for line in open(p, encoding="utf-8", errors="ignore"):
                 m = re.match(r'^- "([^"]+)"', line.strip())
                 if m:
                     lines.append(m.group(1).strip())
+            continue
+        # Standard transcript format: *Drifter:* or *The Drifter:*
+        for line in open(p, encoding="utf-8", errors="ignore"):
+            m = re.match(r"^\*(?:The )?Drifter:\*\s*(.*)$", line.strip())
+            if m:
+                lines.append(m.group(1).strip())
     return lines
 
 MARKERS = {
@@ -59,30 +62,32 @@ def score_response(candidate, corpus_lines):
     # 1. Vocabulary overlap (0-25 pts)
     in_vocab = sum(1 for t in cand_tokens if t in vocab)
     vocab_ratio = in_vocab / len(cand_tokens)
-    vocab_score = min(25.0, vocab_ratio * 28.0)
+    vocab_score = min(25.0, vocab_ratio * 25.0)
 
     # 2. Bigram & trigram overlap with canonical Drifter phrasing (0-25 pts)
     cand_bi = ngrams(cand_tokens, 2)
     cand_tri = ngrams(cand_tokens, 3)
     bi_hits = sum(1 for b in cand_bi if b in bi_set) / max(1, len(cand_bi))
     tri_hits = sum(1 for t in cand_tri if t in tri_set) / max(1, len(cand_tri))
-    ngram_score = min(25.0, (bi_hits * 18.0) + (tri_hits * 35.0))
+    ngram_score = min(25.0, (bi_hits * 20.0) + (tri_hits * 20.0))
 
     # 3. Signature marker density (0-30 pts)
     marker_hits = [t for t in cand_tokens if t in MARKERS or t.endswith("in'")]
     unique_markers = len(set(marker_hits))
-    marker_score = min(30.0, unique_markers * 7.5)
+    marker_score = min(30.0, unique_markers * 6.0)
 
     # 4. Sentence cadence & length profile (0-20 pts)
     sents = [s.strip() for s in re.split(r"[.!?]+", candidate) if s.strip()]
     avg_words = len(cand_tokens) / max(1, len(sents))
     # Drifter speaks in punchy sentences (avg 3-14 words)
-    if 2.0 <= avg_words <= 14.0:
+    if 3.0 <= avg_words <= 8.0:
         cadence_score = 20.0
+    elif 2.0 <= avg_words <= 14.0:
+        cadence_score = 16.0
     elif avg_words <= 20.0:
-        cadence_score = 12.0
+        cadence_score = 10.0
     else:
-        cadence_score = 5.0
+        cadence_score = 4.0
 
     total = round(vocab_score + ngram_score + marker_score + cadence_score, 1)
     details = {

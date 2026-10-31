@@ -51,7 +51,7 @@ elif echo "$LOWER" | grep -qE "derelict|ship"; then
     RESPONSE="The Derelict? She's my ship. My home. Been draggin' her through the system for a long time. She's got the bank, the portals, the Haul - all my tech. She's ugly, but she works. Heh. Like me. Trust."
 elif echo "$LOWER" | grep -qE "bael"; then
     RESPONSE="Bael? Heh. That kid. He's a Dredgen - through and through. But he's not a Guardian. No Ghost. The Nine gave him power. And now he's out there, causin' trouble. I'll deal with him. And VI. When the time comes. Trust."
-elif echo "$LOWER" | grep -qE "spider|boss"; then
+elif echo "$LOWER" | grep -qE "spider|boss|tangled shore"; then
     RESPONSE="Spider? Heh. We got history. He's a snake, but he's useful. He's got connections, and I got Motes. We help each other. Don't tell the Vanguard. Trust."
 elif echo "$LOWER" | grep -qE "class|hunter|titan|warlock"; then
     RESPONSE="So, what are you? Hunter, Titan, or Warlock? Heh. Don't matter much to me. I got crew in all three. But I'll tell you this - the ones who know when to stop thinkin' and start shootin'... those are the ones I keep around. Trust."
@@ -61,8 +61,6 @@ elif echo "$LOWER" | grep -qE "saladin|old wolf"; then
     RESPONSE="Saladin Forge! To what do I owe the pleasure? Yeah, I remember. You left out the part where you threatened to burn it down. Everything's got value, old Wolf. You just gotta know where to look. Not better. Just different. Heh."
 elif echo "$LOWER" | grep -qE "ikora|ol' rey"; then
     RESPONSE="Ol' Rey Rey? Heh. I got a lotta respect for Ikora. Her shotgun, her intelligence network, her Hidden. I call her 'Ol' Rey Rey' to make her sound less threatening, but the fear is real. Don't tell her I said that."
-elif echo "$LOWER" | grep -qE "spider|tangled shore"; then
-    RESPONSE="Spider? Heh. Business. Pure business. Thanks for helping your ol' pal Drifter with this... delicate situation, hero. I'm there in spirit, boss. Ask him for 'the jerky.' That's the code."
 elif echo "$LOWER" | grep -qE "sloane|thunderguns"; then
     RESPONSE="Sloane? Thunderguns? Yeah, I know her. She's in a bad way. Stasis, Savathun's influence, the whole mess. What I'm saying is... it works. It'll get us what we need, and maybe, if we're lucky, get Sloane what she needs too. Trust."
 elif echo "$LOWER" | grep -qE "eido|poor eido"; then
@@ -71,8 +69,6 @@ elif echo "$LOWER" | grep -qE "aunor|praxic"; then
     RESPONSE="Aunor? That hardliner. Pretty sure she's trying to kill me. She's a Praxic warlock. Vanguard internal affairs. She jumped the shark on that one. I woulda' talked them down. No one had to get hurt. Heh."
 elif echo "$LOWER" | grep -qE "blue|ghost"; then
     RESPONSE="Blue? Heh. We got history. Blue and I... had a heart-to-heart. Pretty much ordered me to get out there and clean up my own mess... for once. That don't sound too fun for either of us, but thanks all the same. And, uh, Blue? I'm sorry."
-elif echo "$LOWER" | grep -qE "derelict"; then
-    RESPONSE="The Derelict? She's my ship. My home. Been draggin' her through the system for a long time. She's got the bank, the portals, the Haul - all my tech. She's ugly, but she works. Heh. Like me. Trust."
 elif echo "$LOWER" | grep -qE "malfeasance"; then
     RESPONSE="Malfeasance. Yeah, I shot bigger guns. But this thing is weaponized heat death. Pure atrophy. And it's the key to my freedom from HIM. Fact is, you don't outdraw that Gunslinger. No one can. But my entire crew - armed with THIS? We don't have to outdraw him. We just have to get our shots in. He dies, too. And make no mistake. You're part of my crew now."
 elif echo "$LOWER" | grep -qE "21% delirium|breakneck"; then
@@ -87,12 +83,6 @@ elif echo "$LOWER" | grep -qE "mote"; then
     RESPONSE="Motes? That's the currency, kid. Kill enemies, grab the Motes, bank 'em. Bank enough, and a blocker goes to the other team. Bank 75, and you summon a Primeval. Don't die with Motes in your pocket. Trust."
 elif echo "$LOWER" | grep -qE "bank"; then
     RESPONSE="Bank those Motes! That's rule one. Don't hoard. Bank often. Ring that dinner bell. Stretch. Soup's on! All bets on you to pull through. Heh, no pressure. Trust."
-elif echo "$LOWER" | grep -qE "hope"; then
-    RESPONSE="Hope? Heh. Hope gets you killed. I learned that in the Dark Age. You hope, and then the world takes it from you. Better to just... play the hand you're dealt. No expectations. No disappointments. Just the game. Trust."
-elif echo "$LOWER" | grep -qE "afraid|fear|scared"; then
-    RESPONSE="Afraid? Heh. Yeah. I'm afraid. Every day. Y'know, some days I still wake up scared. Even when I can't remember my dreams. But fear's just... information. Tells you what matters. And what matters is stayin' alive. Trust."
-elif echo "$LOWER" | grep -qE "regret"; then
-    RESPONSE="Regret? Heh. I don't do regret. I do... lessons. Every mistake I made, every person I lost, every deal that went sideways - that's just the cost of playin' the game. You learn, you adapt, you move on. Or you die. Simple as that. Trust."
 else
     RESPONSE="Heh. You're askin' me somethin' I don't know, kid. I don't know. But I'll tell you this - I got a bad habit of bitin' off more'n I can chew. But hey. Guy's gotta eat. Trust."
 fi
