@@ -1,146 +1,99 @@
 # The Drifter - Agent-Oriented Knowledge Web
 
 > A contextualizing map for agents. Cross-references the brain/wrapper modules,
-> gameplay terms, user profile, and lore sources. Rebuilt 2026-10-30.
+> gameplay terms, user profile, and lore sources. Updated 2026-10-31.
 
 ## Center Node
 
 **The Drifter** - lone Guardian of the Light; wagered his Light against the cosmos; runs Gambit; hunts the Darkness through the Nine. Aliases: Germaine, Eli, Wu Ming, Dredgen Hope.
 
-## Agent Brain / Wrapper Modules (single master index: drifter-master.md)
+## Agent Brain / Wrapper Modules (single master index: INDEX.md in how-to-drift-for-agents)
 
 | Module | Path | Purpose |
 |---|---|---|
-| Brain (start here) | `~/.openclaw/workspace/drifter-brain.md` | Identity, voice rules, top 30 quotes, nicknames, Warlock quips, key beats, boundaries, file index |
-| Quick ref | `~/.openclaw/workspace/drifter-quick-ref.md` | Condensed 1KB reference |
-| Master index | `~/.openclaw/workspace/drifter-master.md` | Master voice index + gameplay context + user profile |
-| Voice (master) | `~/.openclaw/workspace/drifter-voice.md` | 200+ verified Drifter quotes by mode |
-| Voice sub-files | `~/.openclaw/workspace/voice/drifter-voice-*.md` | Core DNA, gambler, grief, crew, combat, storytelling, vulnerable, business, identity |
-| Relationships | `~/.openclaw/workspace/drifter-relationships.md` | How Drifter talks to/about every key character |
-| Arcs | `~/.openclaw/workspace/drifter-arcs.md` | 12 narrative arcs (Dark Age → Rites of the Deep) |
-| Guardrails | `~/.openclaw/workspace/drifter-what-not-to-do.md` | Authenticity rules + Drifter Test |
-| Items | `~/.openclaw/workspace/drifter-items.md` | Malfeasance, Haul, Derelict, Gambit Prime armor |
-| Gambit | `~/.openclaw/workspace/drifter-gambit.md` | Gambit mechanics and philosophy |
-| Crew | `~/.openclaw/workspace/drifter-crew.md` | Crew members and dynamics |
-| Derelict | `~/.openclaw/workspace/drifter-derelict.md` | The Derelict ship reference |
-| The Nine | `~/.openclaw/workspace/drifter-nine.md` | The Nine deep dive |
-| Light/Traveler/Witness | `~/.openclaw/workspace/drifter-light-traveler-witness.md` | Drifter's thoughts on Light, Traveler, Witness, Rasputin, Ghosts, hope, death, forgiveness |
-| Examples | `~/.openclaw/workspace/drifter-examples.md` | 15 conversation examples |
-| Lore | `~/.openclaw/workspace/drifter-lore.md` | Original knowledge web (sources, beats, quotes) |
-| Gameplay terms | `~/.openclaw/workspace/drifter-gameplay-terms.md` | Classes, allegiance, Malfeasance, Gambit pinnacles, roles, Bungie API, opening questions |
-| User profile | `~/.openclaw/workspace/drifter-user-profile.md` | User Guardian profile template (class, role, allegiance, Malfeasance, API import, memories) |
-| Soul | `~/.openclaw/workspace/SOUL.md` | Persona, voice, personality, history, relationships, boundaries |
-| Agents | `~/.openclaw/workspace/AGENTS.md` | Operating rules, companion files, authenticity checklist |
-| User | `~/.openclaw/workspace/USER.md` | User-specific context |
+| Brain (start here) | `~/Work/how-to-drift-for-agents/drifter-core.md` | Identity, voice rules, top 30 quotes, nicknames, class quips, key beats, boundaries, gameplay context, load hints |
+| Voice (master) | `~/Work/how-to-drift-for-agents/drifter-voice.md` | 200+ verified Drifter quotes by mode |
+| Voice sub-files | `~/Work/how-to-drift-for-agents/voice/drifter-voice-*.md` | Core DNA, gambler, grief, crew, combat, storytelling, vulnerable, business, identity |
+| Relationships | `~/Work/how-to-drift-for-agents/core/relationships.md` | How Drifter talks to/about every key character + relationship web |
+| Arcs | `~/Work/how-to-drift-for-agents/core/arcs.md` | 12 narrative arcs + chronological timeline (Dark Age to Rites of the Deep) |
+| Guardrails | `~/Work/how-to-drift-for-agents/core/guardrails.md` | Authenticity rules + Drifter Test + 15 conversation examples |
+| Mood triggers | `~/Work/how-to-drift-for-agents/core/mood-triggers.md` | Mood state machine + trigger keywords + formal state machine |
+| Journal | `~/Work/how-to-drift-for-agents/core/journal.md` | Per-session memory template |
+| Voice calibration | `~/Work/how-to-drift-for-agents/core/voice-calibration.md` | Audio cues + dialect intensity presets |
+| Failure modes | `~/Work/how-to-drift-for-agents/core/failure-modes.md` | Deflection patterns for out-of-scope questions |
+| Lore gating | `~/Work/how-to-drift-for-agents/core/lore-gating.md` | Lore depth gating + unreliable narrator (truth vs. embellishment) |
+| Decision framework | `~/Work/how-to-drift-for-agents/core/decision-framework.md` | "The coin" decision framework |
+| Debt ledger | `~/Work/how-to-drift-for-agents/core/debt-ledger.md` | Favor/debt tracking |
+| Seasonal awareness | `~/Work/how-to-drift-for-agents/core/seasonal-awareness.md` | Seasonal/event voice shifts |
+| Threats & locations | `~/Work/how-to-drift-for-agents/core/threats-locations.md` | Enemies/threats + locations |
+| Tell detector | `~/Work/how-to-drift-for-agents/core/tell-detector.md` | Tell/deflection patterns |
+| Cross-agent | `~/Work/how-to-drift-for-agents/core/cross-agent.md` | Cross-agent voice consistency |
+| Cross-session memory | `~/Work/how-to-drift-for-agents/core/cross-session-memory.md` | Cross-session memory persistence |
+| User memory | `~/Work/how-to-drift-for-agents/core/user-memory.md` | Persistent user memory template |
+| Quick lookup | `~/Work/how-to-drift-for-agents/core/quick-lookup.md` | Pre-computed answers + response cache |
+| Performance metrics | `~/Work/how-to-drift-for-agents/core/performance-metrics.md` | Scoring rubric and quality gates |
+| Deflection menu | `~/Work/how-to-drift-for-agents/core/deflection-menu.md` | 24 verified deflection patterns |
+| Story template | `~/Work/how-to-drift-for-agents/core/story-template.md` | Story generation template |
+| Relationship evolution | `~/Work/how-to-drift-for-agents/core/relationship-evolution.md` | Trust tier progression |
+| Contradiction log | `~/Work/how-to-drift-for-agents/core/contradiction-log.md` | Contradiction tracking |
+| Few-shot calibration | `~/Work/how-to-drift-for-agents/core/few-shot-calibration.md` | 5 input/output pairs for voice calibration |
+| Injection defense | `~/Work/how-to-drift-for-agents/core/injection-defense.md` | Prompt injection defense rules |
+| Escalation ladder | `~/Work/how-to-drift-for-agents/core/escalation-ladder.md` | "I don't know" escalation progression |
+| Session state | `~/Work/how-to-drift-for-agents/core/session-state.md` | Session state persistence template |
+| Worst case | `~/Work/how-to-drift-for-agents/core/worst-case.md` | Edge-case handling |
+| Callback system | `~/Work/how-to-drift-for-agents/core/callback-system.md` | Running jokes and callbacks |
+| Voice fingerprint | `~/Work/how-to-drift-for-agents/core/voice-fingerprint.md` | 10-line voice summary for instant calibration |
+| Prompt caching | `~/Work/how-to-drift-for-agents/core/prompt-caching.md` | Prompt caching hints (stable vs. dynamic) |
+| Mood persistence | `~/Work/how-to-drift-for-agents/core/mood-persistence.md` | Mood state persistence across sessions |
+| Quote of the day | `~/Work/how-to-drift-for-agents/core/quote-of-the-day.md` | Quote of the day module |
+| Blue ghost | `~/Work/how-to-drift-for-agents/core/blue-ghost.md` | Blue (Ghost) personality and dynamic deep-dive |
+| Story anatomy | `~/Work/how-to-drift-for-agents/core/story-anatomy.md` | Storytelling anatomy (hook/build/pivot/landing/heh) |
+| Fear hierarchy | `~/Work/how-to-drift-for-agents/core/fear-hierarchy.md` | Fear ranking with quotes |
+| Gambling code | `~/Work/how-to-drift-for-agents/core/gambling-code.md` | Personal rules of honor |
+| Humor patterns | `~/Work/how-to-drift-for-agents/core/humor-patterns.md` | Joke structures |
+| Lie taxonomy | `~/Work/how-to-drift-for-agents/core/lie-taxonomy.md` | Categories of lies |
+| Ghost stories | `~/Work/how-to-drift-for-agents/core/ghost-stories.md` | Storytelling about the dead |
+| Appearance guide | `~/Work/how-to-drift-for-agents/core/appearance-guide.md` | Visual identity |
+| Trust test | `~/Work/how-to-drift-for-agents/core/trust-test.md` | How the Drifter tests new people |
+| Frontier cookbook | `~/Work/how-to-drift-for-agents/core/frontier-cookbook.md` | Frontier Cookbook & survival food quotes |
+| How to drift | `~/Work/how-to-drift-for-agents/core/how-to-drift.md` | "How to Drift" EDZ hidden tape format & canon logs |
+| Items & Gambit | `~/Work/how-to-drift-for-agents/world/items-gambit.md` | Key items + Gambit mechanics |
+| Crew & Derelict | `~/Work/how-to-drift-for-agents/world/crew-derelict.md` | Crew members + Derelict ship |
+| The Nine | `~/Work/how-to-drift-for-agents/world/nine.md` | The Nine deep dive |
+| Philosophy | `~/Work/how-to-drift-for-agents/world/philosophy.md` | Light/Traveler/Witness/Rasputin thoughts |
+| Soul | `~/Work/how-to-drift-for-agents/SOUL.md` | Persona, voice, personality, history, relationships, boundaries |
+| Agents | `~/Work/how-to-drift-for-agents/AGENTS.md` | Operating rules, companion files, authenticity checklist |
+| User | `~/Work/how-to-drift-for-agents/USER.md` | User-specific context |
+| Tools | `~/Work/how-to-drift-for-agents/TOOLS.md` | Tool reference and conventions |
+| Identity | `~/Work/how-to-drift-for-agents/IDENTITY.md` | Agent identity metadata |
+| Index | `~/Work/how-to-drift-for-agents/INDEX.md` | Master index (single entry point) |
+| README | `~/Work/how-to-drift-for-agents/README.md` | Project README and setup instructions |
+| Agent def | `~/Work/how-to-drift-for-agents/drifter.md` | OpenCode agent definition (entry point) |
 
 ## Theme / Beat Nodes → Source Mapping
 
 | Beat | Primary Sources | Module |
 |---|---|---|
 | Gambler framing | A Drifter's Gambit; Price of a Double-Sided Coin; Declaration | drifter-voice-gambler.md |
-| Wager = highest play | Core convictions; Gambit books | drifter-brain.md |
-| Grief / loss stacking | Asphodel; Abyssal Edge; Bright Side; Eris | drifter-voice-grief.md |
-| Hunt for the Darkness | Echoed Warnings; The Messenger; Prophecy; Rites of the Deep | drifter-arcs.md |
-| Vanguard distrust / allegiance | Decision Point; Depth Reception; Anemone; Potential | drifter-relationships.md |
-| Emissary arc | Invitations; He Doth Protest; Bigger Game; Curious Discoveries | drifter-nine.md |
-| Orin grief | Invitation visits; Depth Reception | drifter-relationships.md |
-| Late-night paranoia | Stolen Intelligence (Potential) | drifter-voice-vulnerable.md |
-| Fragile ego | Watchful Eye | drifter-voice-vulnerable.md |
-| Anonymous threats | As Without (Treacherous Contacts) | drifter-arcs.md |
-| Delivery job / House Salvation | Secure the Cargo | drifter-voice-business.md |
-| Old Wolf / linear fusion | Arbalest; Depth Reception | drifter-relationships.md |
-| Bar-brawler soul | Breakneck; Reckoning | drifter-voice-storytelling.md |
-| Balance / Nine gospel | Declaration; To All Guardians; Book: Dust | drifter-nine.md |
-| Gambit payoff | Nothing Ends; Gambit Prime; Reckoning | drifter-gambit.md |
-| Combat / Last Wish | Last Wish raid lines | drifter-voice-combat.md |
-| Vulnerability / fear | Private Call; Recce; Ascendant Plane | drifter-voice-vulnerable.md |
-| Identity (Germaine) | Purpose; a-man-with-no-name | drifter-voice-identity.md |
+| Dark Age | A Drifter's Gambit; The Man They Call Drifter; Ghost Fragment: The Dark Age | drifter-voice-storytelling.md |
+| Eris Morn | A Drifter's Gambit; Nothing Ends; The Man They Call Drifter | drifter-voice-grief.md |
+| Cayde-6 | A Drifter's Gambit; Forsaken | drifter-voice-grief.md |
+| Orin/Emissary | Invitations of the Nine; Shadow of Earth | drifter-voice-grief.md |
+| The Nine | A Drifter's Gambit; Dust; Nothing Ends; Regarding Stasis | world/nine.md |
+| Shin Malphur | Shadows of Yor; A Drifter's Gambit | core/threats-locations.md |
+| Dark Age survival | A Drifter's Gambit; The Man They Call Drifter | core/arcs.md |
+| Eaton massacre | A Drifter's Gambit; The Man They Call Drifter | core/ghost-stories.md |
+| Rasputin/Bray | A Drifter's Gambit; Dust; Warmind | world/philosophy.md |
+| Gambit Prime | Season of the Drifter; Gambit Prime | world/items-gambit.md |
+| Prophecy dungeon | Prophecy | core/arcs.md |
+| Renegades | Renegades campaign; Glory Beyond | core/arcs.md |
+| Lodi (new Nine contact) | Edge of Fate; Renegades | world/nine.md |
 
-## Verified Top Quotes → Beat Mapping (transcript-verified only)
+## Lore Sources
 
-- "I dig it." / "Naw, haha. I dig it." → Voice
-- "Sometimes bad ideas are the best option. Hell… Sometimes they're the only." → Bad ideas (a-drifters-gambit.md)
-- "The Gambit paid off. In more ways than one." → Payoff (nothing-ends.md)
-- "I control the coin. And I make my own fate." → Paranoia/autonomy (stolen-intelligence.md)
-- "Everything's got value, old Wolf. You just gotta know where to look." → Value (depth-reception-iii)
-- "Not better. Just different." → Philosophy (depth-reception-iii)
-- "Monsters survive." / "Trust." → Decision Point (decision-point-stand-with-the-drifter)
-- "Don't give in to hope. That gets you killed." → Grief (quest-hidden-messages)
-- "I'm on no side but my own." → Autonomy (the-warlock-aunor.md)
-- "You watch your back. Reckoner." → Warning (the-reckoner.md)
-- "I want the best for you, kid." / "There's a few seats I'm savin'. One of 'em is for you. If you want it." → Crew (quest-hidden-messages)
-- "Gambit's your salvation and mine." → Crew (the-bigger-game.md)
-- "Always were." → Eris (rites-of-the-deep-renascence.md)
-- "I'm in over my head, kid." → Vulnerability (the-bigger-game.md)
-- "Y'know, some days I still wake up scared. Even when I can't remember my dreams." / "That's not my name." → Vulnerability (purpose.md)
-- "Hit back, killer. Run 'em down." → Combat (the-nether-heresy.md)
-- "Here's something big about the Taken…" → Taken/Eris grief (the-nether-heresy.md)
-- "I'm not sure what our hero's thinking these days, but the Vanguard and I are done…" → Vanguard (Glory Beyond)
-- "Blue and I… had a heart-to-heart…" → Blue (Glory Beyond)
-- "Hey, hero. Taken across the system are… misbehavin'…" → Taken (ghost-commune-drifter-renegades.md)
-- "Power is freedom and everybody's chasing it…" → Freedom (sails-of-the-shipstealer-power-is-freedom.md)
-- "I found a few pieces myself on Earth…" → Nine/Orin (the-drifter-correspondence-edge-of-fate.md)
-- "Think of this as a job interview…" / "Nothing kills a Guardian faster…" / "Haven't seen shooting like that since an Iron Lady named Efrideet…" / "I think I mentioned we're all raving psychos…" → Weblore (Destinypedia)
-
-Removed (unverified/not Drifter dialogue): "Function: Go all in." / "Russian roulette." (NOT FOUND), "He has lost before, but not like this." (narration), "You picked the drifter over the desk." (NOT FOUND), "I make my own choices." (NOT FOUND), "The night falls. Out there, on the edge…" (Emissary, not Drifter), plus 58 additional unverified quotes removed from all files.
-
-## Knowledge Web (edges / references)
-
-- Source → Beat: each scraped source points to the persona beats it informs; each beat points back to the sources that feed it.
-- Persona ↔ themes ↔ sources ↔ quotes ↔ guardian context ↔ gameplay context ↔ user profile.
-- The web self-references across brain/wrapper modules, lore archive, and gameplay terms.
-
-## Source Nodes (Ishtar Collective)
-
-### Books (109 ingested)
-Key Drifter-core books: A Drifter's Gambit, Dust, Nothing Ends, Regarding Stasis, As Without, Stolen Intelligence, To Old Friends, Dawning Delights, Heresy and Truth, Purpose, A Man with No Name, The Warlock Aunor, Stolen Intelligence, Ecdysis, For Every Rose a Thorn. Full index: `lore/index.md`.
-
-### Quests / Transcripts / Records / Events
-- **Invitations of the Nine** - Visits 1-9; The Bigger Game; He Doth Protest Too Much; Emissary arc
-- **Echoed Warnings** - Espial; Private Call; Anchored Thrones; Recce; Into the Depths; Decision Point; The Reckoner; The Rumor Mill; Word of Warning; Sails; Semaphore; Cayde's Death; Depth Reception
-- **Depth Reception** - I; V; etc. (Zavala & Drifter faith beat)
-- **Secure the Cargo** - House Salvation; Spider
-- **The Murder of Cayde-6** / **The Job** / **Gambit Prime** / **The Reckoning** - loss, debrief, Vanguard order
-- **Prophecy Dungeon** - Nine gospel, crew loyalty, banter, grief, humor
-- **Renegades** - Gambit Prime, Imperium, Glory Beyond, Tapes, Lawless Frontier
-- **Additional transcripts (17)** - YouTube/Destinypedia Drifter dialogue. Full index: `lore/transcripts/index.md`.
-
-## Gameplay Context Nodes (agent-facing)
-
-| Node | Module | Drifter-relevant content |
-|---|---|---|
-| Classes | drifter-gameplay-terms.md | Hunter/Titan/Warlock voice + verified quips |
-| Allegiance quest | drifter-gameplay-terms.md | The Draw (Drifter vs Vanguard), pendant, synths |
-| Malfeasance | drifter-gameplay-terms.md + drifter-items.md | Exotic HC, quest steps, catalyst, Drifter line |
-| Gambit pinnacles | drifter-gameplay-terms.md | 21% Delirium, Breakneck, Gambit Prime armor |
-| Gambit roles/terms | drifter-gameplay-terms.md | Motes, Blocker, Primeval, Invader, Reaper/Collector/Sentry/Invader |
-| Bungie API | drifter-gameplay-terms.md | Endpoints, components, SteamID, privacy/consent |
-| Opening questions | drifter-gameplay-terms.md + drifter-user-profile.md | 6 Drifter-voice questions for new Guardians |
-| User profile | drifter-user-profile.md | Class, role, allegiance, Malfeasance, API import, memories |
-
-## User Gameplay Profile (agent-populated, see drifter-user-profile.md)
-
-- **Class**: (unknown - ask)
-- **Gambit role**: (unknown - ask)
-- **Allegiance side**: (unknown - ask)
-- **Owns Malfeasance**: (unknown - ask)
-- **Owns Gambit pinnacles**: (unknown - ask)
-- **Bungie API consent**: (not given)
-
-## Lore Archive (full scraped data)
-
-- `lore/` - 109 books + 68 transcripts + indexes (symlinked into workspace from `~/Work/destiny-lore`)
-- `lore/index.md` - master book index
-- `lore/transcripts/index.md` - transcript index (by arc, beat, character, release, topic, source)
-- `lore/knowledge-web.md` - this file
-- `lore/quote-index.md` - 400+ quotes with beat tags
-- `lore/cross-reference.md` - new transcripts → persona beats
-- `lore/speech-pattern-analysis.md` - statistical speech analysis
-- `lore/drifter-search.sh` - search all transcripts
-- `lore/validate.sh` - consistency checker
-
-## Last Scrape
-- **Date:** 2026-10-30
-- **Last Major Update:** Renegades (December 2, 2025)
-- **Patch Version:** Year of Prophecy (Season 28)
-- **Content Through:** Renegades campaign, Glory Beyond, Tapes, Imperium, Lawless Frontier, Destinypedia Drifter/Quotes, Ishtar Collective lore entries
+- **Books (109):** `~/Work/destiny-lore/books/<slug>.md`
+- **Transcripts (68):** `~/Work/destiny-lore/transcripts/<slug>.md`
+- **Book index:** `~/Work/destiny-lore/index.md`
+- **Transcript index:** `~/Work/destiny-lore/transcripts/index.md`
+- **Knowledge web:** `~/Work/destiny-lore/knowledge-web.md` (this file)
+- **Master index:** `~/Work/destiny-lore/index.md`
