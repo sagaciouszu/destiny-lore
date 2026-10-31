@@ -28,21 +28,15 @@ Any agent (Drifter persona, lore research, etc.) may reference these files at wi
 All content sourced from https://www.ishtar-collective.net (Ishtar Collective).
 Book list mirrored from https://www.ishtar-collective.net/books.
 
-This archive is a fan-made collection and is not affiliated with or endorsed by Bungie.
+Fan-made collection. Not affiliated with or endorsed by Bungie.
 
-- **Destiny 2** - © Bungie, Inc. All Destiny 2 lore, characters, locations, and related content are the property of Bungie.
+- **Destiny 2** - © Bungie, Inc. All lore, characters, locations are Bungie's property.
 - **Ishtar Collective** (https://www.ishtar-collective.net) - Primary source for all ingested lore text.
-- **Destiny Lore Vault** (YouTube) - Audio recordings of key transcripts used for voice/tone reference.
+- **Destiny Lore Vault** (YouTube) - Audio recordings of key transcripts.
 
-All content is sourced from publicly available Destiny 2 lore. No original creative content is claimed.
+All content sourced from publicly available Destiny 2 lore. No original creative content is claimed.
 
 ## Progress
 
-See `index.md` for per-book status. Currently: 109 / 109 books ingested. 68 transcripts ingested.
-
-## Last Scrape
-- **Date:** 2026-10-30
-- **Last Major Update:** Renegades (December 2, 2025)
-- **Patch Version:** Year of Prophecy (Season 28)
-- **Content Through:** Renegades campaign, Glory Beyond mission, Tape collectibles, Imperium missions, Lawless Frontier
-
+109 / 109 books ingested. 68 transcripts ingested.
+Last scrape: 2026-10-30. Content through Renegades (Dec 2025).

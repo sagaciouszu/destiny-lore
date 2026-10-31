@@ -24,7 +24,7 @@ echo ""
 
 run "Archive & Link Validation" "bash $ARCHIVE/validate.sh | grep -q 'unverified quotes: 0' && bash $ARCHIVE/validate.sh | grep -q 'missing: 0'"
 run "Cross-Reference Validator" "bash $ARCHIVE/drifter-xref-validate.sh | grep -q 'Broken references: 0'"
-run "Module Completeness (41 checks)" "bash $ARCHIVE/drifter-module-test.sh | grep -q 'Failed: 0'"
+run "Module Completeness (201 checks)" "bash $ARCHIVE/drifter-module-test.sh | grep -q 'Failed: 0'"
 run "Single-Turn Voice (19 scenarios)" "bash $ARCHIVE/drifter-test-suite.sh | grep -q 'Failed: 0'"
 run "N-Gram Voice Scorer" "python3 $ARCHIVE/drifter-voice-scorer.py 'Hey, hero. Bank those Motes! Heh. Trust.' | grep -q 'PASS'"
 run "10-Turn Emotional Arc" "bash $ARCHIVE/drifter-multiturn-test.sh | grep -q '10/10'"
