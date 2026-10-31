@@ -61,9 +61,9 @@ case "$TIER" in
         echo "Usage: $0 [minimal|standard|deep]"
         echo ""
         echo "Tiers:"
-        echo "  minimal  — ~6K, brain only. Quick banter."
-        echo "  standard — ~12K, brain + core voice + relationships. Most conversations."
-        echo "  deep     — ~50K, all files. Deep lore."
+        echo "  minimal  - ~6K, brain only. Quick banter."
+        echo "  standard - ~12K, brain + core voice + relationships. Most conversations."
+        echo "  deep     - ~50K, all files. Deep lore."
         exit 1
         ;;
 esac

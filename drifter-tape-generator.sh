@@ -18,7 +18,7 @@ case "$LOWER" in
         ;;
     *starv*|*food*|*eat*|*hungry*)
         PART="Part Two: Guy's Gotta Eat"
-        BODY="Hey, kid. It's me. The Drifter. And this is 'How to Drift,' $PART. You ever go hungry 'til you keeled over? We did that a lot in the Dark Age. Our Ghosts would bring us back - still hungry. Really pissed me off. Out on the frontier, you ask yourself: think you can eat a Hive Knight? Vex have that soft spot at the center. Bet you could cook that — eat it. Heh. That's all I got. Cut the tape."
+        BODY="Hey, kid. It's me. The Drifter. And this is 'How to Drift,' $PART. You ever go hungry 'til you keeled over? We did that a lot in the Dark Age. Our Ghosts would bring us back - still hungry. Really pissed me off. Out on the frontier, you ask yourself: think you can eat a Hive Knight? Vex have that soft spot at the center. Bet you could cook that - eat it. Heh. That's all I got. Cut the tape."
         ;;
     *aunor*|*praxic*|*vanguard*)
         PART="Part Four: Watch the Hardliners"

@@ -33,16 +33,16 @@ case "$LOWER_TOPIC" in
         STORY="Malfeasance. Yeah, I shot bigger guns. But this thing is weaponized heat death. Pure atrophy. And it's the key to my freedom from HIM. Fact is, you don't outdraw that Gunslinger. No one can. But my entire crew - armed with THIS? We don't have to outdraw him. We just have to get our shots in. He dies, too. And make no mistake. You're part of my crew now. Heh. You are insane. I dig it."
         ;;
     *gambit*)
-        STORY="Gambit? Heh. That's my pride and joy. Kill enemies, grab the Motes, bank 'em. Bank enough, and a blocker goes to the other team. Bank 75, and you summon a Primeval. Kill it, you win. Simple. But don't die with Motes in your pocket, kid. And watch your back — invaders are always comin'. All bets on you to pull through. Heh, no pressure."
+        STORY="Gambit? Heh. That's my pride and joy. Kill enemies, grab the Motes, bank 'em. Bank enough, and a blocker goes to the other team. Bank 75, and you summon a Primeval. Kill it, you win. Simple. But don't die with Motes in your pocket, kid. And watch your back - invaders are always comin'. All bets on you to pull through. Heh, no pressure."
         ;;
     *nine*)
-        STORY="The Nine? Heh. They're... somethin'. I've been dealin' with 'em for a long time. They see the weft and weave of fate. Me? I just see the next hand. But I'll tell you this — they're not what you think. They're scared. And scared things do desperate things. Trust. I got a bad habit of bitin' off more'n I can chew. But hey. Guy's gotta eat. And the deal that got me the Haul... it just looked so damn tasty."
+        STORY="The Nine? Heh. They're... somethin'. I've been dealin' with 'em for a long time. They see the weft and weave of fate. Me? I just see the next hand. But I'll tell you this - they're not what you think. They're scared. And scared things do desperate things. Trust. I got a bad habit of bitin' off more'n I can chew. But hey. Guy's gotta eat. And the deal that got me the Haul... it just looked so damn tasty."
         ;;
     *shin*|*malphur*)
-        STORY="Shin Malphur. The Golden Gun. Heh. That man's out there, and he's got a bullet with my name on it. But here's the thing — he follows the Light like a zealot. And zealots make mistakes. I ain't scared of him. Much. Heh. Fact is, you don't outdraw that Gunslinger. No one can. But my entire crew - armed with Malfeasance? We don't have to outdraw him. We just have to get our shots in."
+        STORY="Shin Malphur. The Golden Gun. Heh. That man's out there, and he's got a bullet with my name on it. But here's the thing - he follows the Light like a zealot. And zealots make mistakes. I ain't scared of him. Much. Heh. Fact is, you don't outdraw that Gunslinger. No one can. But my entire crew - armed with Malfeasance? We don't have to outdraw him. We just have to get our shots in."
         ;;
     *)
-        STORY="Heh. You're askin' me about $TOPIC. That's a long story, kid. I'll say it straight — I don't know everything. But I'll tell you this: I got a bad habit of bitin' off more'n I can chew. But hey. Guy's gotta eat. Trust."
+        STORY="Heh. You're askin' me about $TOPIC. That's a long story, kid. I'll say it straight - I don't know everything. But I'll tell you this: I got a bad habit of bitin' off more'n I can chew. But hey. Guy's gotta eat. Trust."
         ;;
 esac
 

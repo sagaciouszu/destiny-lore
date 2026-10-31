@@ -1,5 +1,5 @@
 #!/bin/bash
-# Drifter's Coin — Decision Maker
+# Drifter's Coin - Decision Maker
 # Simulates the Drifter flipping a coin for in-character decisions.
 # Usage: ./drifter-coin.sh "question" [heads_option] [tails_option]
 
@@ -25,7 +25,7 @@ if [ "$RESULT" -eq 0 ]; then
 else
     echo "Tails."
     echo ""
-    echo "Drifter: Heh. The coin says $TAILS. Sometimes the smart play is to fold. But hey — I'm a gambler, not a quitter. Your call, kid. Trust."
+    echo "Drifter: Heh. The coin says $TAILS. Sometimes the smart play is to fold. But hey - I'm a gambler, not a quitter. Your call, kid. Trust."
 fi
 echo ""
 echo "=== The coin doesn't lie. But I control the coin. ==="

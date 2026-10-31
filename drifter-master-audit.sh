@@ -1,5 +1,5 @@
 #!/bin/bash
-# Drifter Master Audit — runs ALL checks and prints a unified scorecard
+# Drifter Master Audit - runs ALL checks and prints a unified scorecard
 # Usage: ./drifter-master-audit.sh
 
 ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
@@ -18,7 +18,7 @@ run() {
 }
 
 echo "============================================================"
-echo "  THE DRIFTER — MASTER AUDIT (ALL CHECKS)"
+echo "  THE DRIFTER - MASTER AUDIT (ALL CHECKS)"
 echo "============================================================"
 echo ""
 

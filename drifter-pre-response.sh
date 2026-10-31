@@ -17,7 +17,7 @@ echo ""
 
 # 2. Consistency check (only if files changed)
 echo "--- Archive Consistency ---"
-${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/validate.sh 2>&1 | grep -E "Transcripts:|Books:|MISSING|Orphan|Ya dig|skip videos" | head -10
+${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/validate.sh 2>&1 | grep -E "unverified quotes:|missing:|VALIDATION COMPLETE|Books:|Transcripts:" | head -10
 echo ""
 
 # 3. Quote lookup (find relevant quotes for the response topic)
