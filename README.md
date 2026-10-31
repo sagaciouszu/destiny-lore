@@ -46,12 +46,3 @@ See `index.md` for per-book status. Currently: 109 / 109 books ingested. 68 tran
 - **Patch Version:** Year of Prophecy (Season 28)
 - **Content Through:** Renegades campaign, Glory Beyond mission, Tape collectibles, Imperium missions, Lawless Frontier
 
-## Attributions
-
-This archive is a fan-made collection and is not affiliated with or endorsed by Bungie.
-
-- **Destiny 2** - © Bungie, Inc. All Destiny 2 lore, characters, locations, and related content are the property of Bungie.
-- **Ishtar Collective** (https://www.ishtar-collective.net) - Primary source for all ingested lore text.
-- **Destiny Lore Vault** (YouTube) - Audio recordings of key transcripts used for voice/tone reference.
-
-All content is sourced from publicly available Destiny 2 lore. No original creative content is claimed.
