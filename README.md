@@ -1,6 +1,15 @@
 # Destiny 2 Lore Knowledge Base
 
 <p align="center">
+  <img src='https://img.shields.io/github/v/tag/sagaciouszu/destiny-lore?label=version&color=blue' alt='Version'/>
+  <img src='https://github.com/sagaciouszu/destiny-lore/actions/workflows/ci.yml/badge.svg' alt="CI"/>
+  <img src='https://img.shields.io/badge/books-109-orange' alt='Books'/>
+  <img src='https://img.shields.io/badge/transcripts-68-orange' alt='Transcripts'/>
+  <img src='https://img.shields.io/badge/quotes-473%20verified-orange' alt='Quotes'/>
+  <img src='https://img.shields.io/badge/made%20with-Love-red' alt='Made with Love'/>
+</p>
+
+<p align="center">
   <img src="header.png" alt="Destiny 2 Lore - Your Ghost Is Not An Agent" width="100%"/>
 </p>
 
