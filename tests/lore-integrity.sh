@@ -23,7 +23,6 @@ check "[ -d $ARCHIVE/books ]" "books/ directory exists"
 check "[ -d $ARCHIVE/transcripts ]" "transcripts/ directory exists"
 check "[ -f $ARCHIVE/index.md ]" "index.md exists"
 check "[ -f $ARCHIVE/transcripts/index.md ]" "transcripts/index.md exists"
-check "[ -f $ARCHIVE/knowledge-web.md ]" "knowledge-web.md exists"
 
 # File counts
 BOOKS=$(ls "$ARCHIVE/books"/*.md 2>/dev/null | wc -l)

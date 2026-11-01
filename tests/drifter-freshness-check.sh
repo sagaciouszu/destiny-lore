@@ -38,12 +38,5 @@ echo "Books: $BOOKS (expected ~109)"
 echo "Transcripts: $TRANSCRIPTS (expected ~68)"
 echo ""
 
-# Check knowledge web exists
-if [ -f "$ARCHIVE/knowledge-web.md" ]; then
-    echo "knowledge-web.md: EXISTS ($(wc -l < "$ARCHIVE/knowledge-web.md") lines)"
-else
-    echo "knowledge-web.md: MISSING"
-fi
-
 echo ""
 echo "=== FRESHNESS CHECK COMPLETE ==="

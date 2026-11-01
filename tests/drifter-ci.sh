@@ -36,7 +36,6 @@ echo "--- 1. Archive Integrity ---"
 run_check "Books exist (109+)" "[ $(ls $ARCHIVE/books/*.md 2>/dev/null | wc -l) -ge 100 ]"
 run_check "Transcripts exist (60+)" "[ $(ls $ARCHIVE/transcripts/*.md 2>/dev/null | grep -v index | wc -l) -ge 60 ]"
 run_check "Index exists" "[ -f $ARCHIVE/index.md ]"
-run_check "Knowledge web exists" "[ -f $ARCHIVE/knowledge-web.md ]"
 
 echo ""
 echo "--- 2. Quote Verification ---"

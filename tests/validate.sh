@@ -92,13 +92,6 @@ print("unverified quotes:",len(unv))
 PY
 echo ""
 
-echo "--- Knowledge Web ---"
-if [ -f "$ARCHIVE/knowledge-web.md" ]; then
-    echo "knowledge-web.md: EXISTS ($(wc -l < "$ARCHIVE/knowledge-web.md") lines)"
-else
-    echo "knowledge-web.md: MISSING"
-fi
-
 echo "--- Master Index ---"
 if [ -f "$WORKSPACE/INDEX.md" ]; then
     echo "INDEX.md: EXISTS ($(wc -l < "$WORKSPACE/INDEX.md") lines)"

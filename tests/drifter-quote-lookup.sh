@@ -17,7 +17,7 @@ fi
 
 python3 -c "
 import json, sys
-with open('${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/quote-inverted-index.json', 'r') as f:
+with open('${WORKSPACE:-$(cd "$(dirname "$0")/../../how-to-drift-for-agents" && pwd)}/reference/quote-inverted-index.json', 'r') as f:
     index = json.load(f)
 keyword = '$KEYWORD'.lower()
 if keyword in index:
