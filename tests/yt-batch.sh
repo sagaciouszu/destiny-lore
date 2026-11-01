@@ -4,7 +4,7 @@
 # Usage: ./yt-batch.sh <url1> <url2> ... OR ./yt-batch.sh --file urls.txt
 
 OUTPUT_DIR="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}/transcripts"
-SCRIPT_DIR="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 if [ "$1" = "--file" ] && [ -n "$2" ]; then
     URLS=$(cat "$2")

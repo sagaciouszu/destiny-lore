@@ -3,7 +3,7 @@
 # Verifies every "Depends On:" reference points to an existing file.
 # Usage: ./drifter-xref-validate.sh
 
-WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../../how-to-drift-for-agents" && pwd)}"
 echo "=== DRIFTER CROSS-REFERENCE VALIDATION ==="
 echo ""
 

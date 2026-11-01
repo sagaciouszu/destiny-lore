@@ -4,8 +4,8 @@
 # Usage: ./drifter-quote-verify.sh
 # Exit code: 0 if all quotes verified, 1 if unverified quotes found.
 
-ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
-WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")/.." && pwd)}"
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../../how-to-drift-for-agents" && pwd)}"
 
 python3 - "$ARCHIVE" "$WORKSPACE" << 'PY'
 import re, glob, os, sys

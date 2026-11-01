@@ -3,8 +3,8 @@
 # Checks if the lore archive needs updating.
 # Usage: ./drifter-freshness-check.sh
 
-ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
-WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")/.." && pwd)}"
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../../how-to-drift-for-agents" && pwd)}"
 
 echo "=== DRIFTER LORE FRESHNESS CHECK ==="
 echo ""

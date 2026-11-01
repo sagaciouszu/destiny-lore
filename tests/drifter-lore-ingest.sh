@@ -5,7 +5,7 @@
 #
 # Example: ./drifter-lore-ingest.sh "https://www.ishtar-collective.net/entries/..." "new-entry"
 
-ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")/.." && pwd)}"
 URL="$1"
 SLUG="$2"
 

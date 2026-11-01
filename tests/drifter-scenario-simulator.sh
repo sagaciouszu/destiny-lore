@@ -3,8 +3,8 @@
 # Feeds a Guardian input and outputs a Drifter-voice response.
 # Usage: ./drifter-scenario-simulator.sh "your question here"
 
-ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
-VALIDATOR="$ARCHIVE/drifter-validate-response.sh"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")/.." && pwd)}"
+VALIDATOR="$(dirname "$0")/drifter-validate-response.sh"
 
 INPUT="$*"
 if [ -z "$INPUT" ]; then

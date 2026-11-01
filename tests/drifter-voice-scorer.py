@@ -11,7 +11,7 @@ Usage:
 import glob, math, os, re, sys
 from collections import Counter
 
-ARCHIVE = os.environ.get("ARCHIVE", os.path.dirname(os.path.abspath(__file__)))
+ARCHIVE = os.environ.get("ARCHIVE", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 def tokenize(text):
     return re.findall(r"[a-z0-9']+", text.lower())

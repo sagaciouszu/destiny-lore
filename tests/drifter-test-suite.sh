@@ -1,6 +1,6 @@
 #!/bin/bash
-ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
-VALIDATOR="$ARCHIVE/drifter-validate-response.sh"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")/.." && pwd)}"
+VALIDATOR="$(dirname "$0")/drifter-validate-response.sh"
 
 echo "=== DRIFTER AUTOMATED TEST SUITE ==="
 echo ""

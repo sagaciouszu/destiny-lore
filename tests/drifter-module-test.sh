@@ -4,8 +4,8 @@
 # Also runs structural, consistency, and hygiene checks.
 # Usage: ./drifter-module-test.sh
 
-WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../how-to-drift-for-agents" && pwd)}"
-ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")" && pwd)}"
+WORKSPACE="${WORKSPACE:-$(cd "$(dirname "$0")/../../how-to-drift-for-agents" && pwd)}"
+ARCHIVE="${ARCHIVE:-$(cd "$(dirname "$0")/.." && pwd)}"
 MANIFEST="$WORKSPACE/core/test-manifest.txt"
 PASS=0; FAIL=0; TOTAL=0
 
@@ -75,7 +75,7 @@ echo ""
 echo "--- Header Checks ---"
 check "all .md files have Depends On" "[ $(grep -rl 'Depends On' $WORKSPACE --include='*.md' 2>/dev/null | grep -v .git | wc -l) -ge 65 ]"
 check "all .md files have Token Estimate" "[ $(grep -rl 'Token Estimate' $WORKSPACE --include='*.md' 2>/dev/null | grep -v .git | wc -l) -ge 65 ]"
-check "no circular dependencies" "bash $ARCHIVE/drifter-conflict-check.sh 2>/dev/null | grep -q 'No circular' || python3 -c \"import sys; sys.exit(0)\""
+check "no circular dependencies" "bash $(dirname "$0")/drifter-conflict-check.sh 2>/dev/null | grep -q 'No circular' || python3 -c \"import sys; sys.exit(0)\""
 
 # --- Lore symlink ---
 echo ""
