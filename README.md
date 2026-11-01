@@ -4,7 +4,9 @@
   <img src="header.png" alt="Destiny 2 Lore - Your Ghost Is Not An Agent" width="100%"/>
 </p>
 
-**Version:** 0.2.0 | **Status:** Development
+**Version:** 0.2.1 | **Status:** Development
+
+> ⚠️ **WARNING:** This repository is under heavy development while the knowledge base is being constructed. Expect frequent changes, incomplete data, and shifting structure. The author's prowess is not to be trusted with anything important. Use at your own risk.
 
 A shared, indexed repository of Destiny 2 lore ingested from the Ishtar Collective.
 Any agent (Drifter persona, lore research, etc.) may reference these files at will.

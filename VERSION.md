@@ -1,5 +1,8 @@
 # Version History
 
+## v0.2.1 (2026-10-31)
+- Patch: README warning update, version bump
+
 ## v0.2.0 (2026-10-31)
 - Minor version bump: all tests pass, CI pipeline (26 checks)
 - Voice scorer 98.1, scenario sim 88%, tape gen 92%+
