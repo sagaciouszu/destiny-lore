@@ -1,5 +1,9 @@
 # Destiny 2 Lore Knowledge Base
 
+<p align="center">
+  <img src="header.png" alt="Destiny 2 Lore - Your Ghost Is Not An Agent" width="100%"/>
+</p>
+
 **Version:** 0.1.0 | **Status:** Development
 
 A shared, indexed repository of Destiny 2 lore ingested from the Ishtar Collective.
