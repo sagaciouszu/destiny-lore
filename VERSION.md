@@ -1,5 +1,10 @@
 # Version History
 
+## v0.2.0 (2026-10-31)
+- Minor version bump: all tests pass, CI pipeline (26 checks)
+- Voice scorer 98.1, scenario sim 88%, tape gen 92%+
+- Coherency audit complete
+
 ## v0.1.0 (2026-10-31)
 - Minor version bump: all tests pass, full audit clean
 - Refactored testing suites (module test now 201 checks)
