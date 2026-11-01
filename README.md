@@ -6,7 +6,7 @@
   <img src='https://img.shields.io/badge/books-109-orange' alt='Books'/>
   <img src='https://img.shields.io/badge/transcripts-68-orange' alt='Transcripts'/>
   <img src='https://img.shields.io/badge/quotes-473%20verified-orange' alt='Quotes'/>
-  <img src='https://img.shields.io/badge/made%20with-Love-red' alt='Made with Love'/>
+  <img src='https://img.shields.io/badge/Made%20with-Motes-00FF00' alt='Made with Motes'/>
   <img src='https://img.shields.io/badge/Made%20with-Strand-5cdd76' alt='Made with Strand'/>
 </p>
 
