@@ -1,8 +1,8 @@
 # Destiny 2 Lore Knowledge Base
 
 <p align="center">
-  <img src='https://img.shields.io/github/v/tag/sagaciouszu/destiny-lore?label=version&color=blue' alt='Version'/>
-  <img src='https://github.com/sagaciouszu/destiny-lore/actions/workflows/ci.yml/badge.svg' alt='CI'/>
+  <img src='https://img.shields.io/github/v/tag/sagaciouszu/destiny-agent-grimoire?label=version&color=blue' alt='Version'/>
+  <img src='https://github.com/sagaciouszu/destiny-agent-grimoire/actions/workflows/ci.yml/badge.svg' alt='CI'/>
   <img src='https://img.shields.io/badge/books-110-orange' alt='Books'/>
   <img src='https://img.shields.io/badge/transcripts-68-orange' alt='Transcripts'/>
   <img src='https://img.shields.io/badge/quotes-473%20verified-orange' alt='Quotes'/>
