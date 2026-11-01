@@ -59,7 +59,7 @@ else
 fi
 
 # 5. Check for dropped g's
-if echo "$RESPONSE" | grep -qE "doin'|gotta|nothin'|crawlin'|beggin'|learnin'|teachin'|doin'|more'n|what's comin'|ol'|woulda'|coulda'|shoulda'|lookin'|talkin'|runnin'|goin'|comin'|bein'|havin'|makin'|takin'|gettin'|givin'|livin'|workin'|playin'|fightin'|shootin'|thinkin'|movin'|somethin'|everythin'|anythin'|nothin'|crawlin'|beggin'|learnin'|teachin'|doin'"; then
+if echo "$RESPONSE" | grep -qiE "doin'|gotta|askin'|stayin'|nothin'|crawlin'|beggin'|learnin'|teachin'|doin'|stayin'|more'n|what's comin'|ol'|woulda'|coulda'|shoulda'|lookin'|talkin'|runnin'|goin'|comin'|bein'|havin'|makin'|takin'|gettin'|givin'|livin'|workin'|playin'|fightin'|shootin'|thinkin'|movin'|somethin'|everythin'|anythin'|nothin'|crawlin'|beggin'|learnin'|teachin'|doin'"; then
     SCORE=$((SCORE + 1))
 else
     WARNINGS="$WARNINGS\n- Missing dropped g's/shortened words"

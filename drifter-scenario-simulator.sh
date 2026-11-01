@@ -26,7 +26,7 @@ elif echo "$LOWER" | grep -qE "cayde"; then
 elif echo "$LOWER" | grep -qE "felwinter"; then
     RESPONSE="Felwinter Peak? Heh. I ran a little bar at the base. Wu Ming, they called me. Made some coin selling drinks to the Iron Lords... then spent it hiring them for side jobs. Everything's got value, old Wolf. You just gotta know where to look. Not better. Just different. Heh. Trust."
 elif echo "$LOWER" | grep -qE "dark age"; then
-    RESPONSE="Dark Age was different times. We had no City. No Vanguard. Just us and our Ghosts, crawlin' through the mud. The Warlords and the Iron Lords taught me the Light is no gift. Heh. It brought hell to earth, and when we begged to die, it said hell no."
+    RESPONSE="Dark Age, kid? Heh. Yeah, different times. We had no City, no Vanguard, just us and our Ghosts crawlin' through the mud. The Warlords taught me the Light is no gift. Heh. It brought hell to earth, and when we begged to die, it said hell no. All bets were off back then. Trust."
 elif echo "$LOWER" | grep -qE "darkness|dark"; then
     RESPONSE="The Darkness? Heh. You really wanna know? I'll say it straight - it's not what you think. It's not evil. It's just... different. Like the Light, but honest about what it is. Trust me on this one, kid."
 elif echo "$LOWER" | grep -qE "zavala|cue ball"; then
@@ -34,19 +34,19 @@ elif echo "$LOWER" | grep -qE "zavala|cue ball"; then
 elif echo "$LOWER" | grep -qE "vanguard"; then
     RESPONSE="The Vanguard? Heh. Cue Ball and Ol Rey Rey? They're good people, mostly. But they see the world through that City lens. Sure. But the people don't see the whole board. I do. I'm on no side but my own. Always have been. All bets on you. Trust."
 elif echo "$LOWER" | grep -qE "nine"; then
-    RESPONSE="The Nine? Heh. They're... somethin'. I've been dealin' with 'em for a long time. They see the weft and weave of fate. Me? I just see the next hand. But I'll tell you this - they're not what you think. They're scared. And scared things do desperate things. Trust."
+    RESPONSE="The Nine, kid? Heh. Yeah. They're... somethin'. I've been dealin' with 'em for a long time. They see the weft and weave of fate. Me? I just see the next hand. But I'll tell you this - they're not what you think. They're scared. And scared things do desperate things. All bets on you. Trust."
 elif echo "$LOWER" | grep -qE "shin|malphur|golden gun"; then
-    RESPONSE="Shin Malphur. The Golden Gun. Heh. That man's out there, and he's got a bullet with my name on it. But here's the thing - he follows the Light like a zealot. And zealots make mistakes. I ain't scared of him. Much. Heh."
+    RESPONSE="Shin Malphur, kid? The Golden Gun. Heh. That man's out there, and he's got a bullet with my name on it. But here's the thing - he follows the Light like a zealot. And zealots make mistakes. I ain't scared of him. Much. Heh. Yeah, I ain't scared. Nah. Gotta watch your back, though."
 elif echo "$LOWER" | grep -qE "regret"; then
-    RESPONSE="Regret? Heh. I don't do regret. I do... lessons. Every mistake I made, every person I lost, every deal that went sideways - that's just the cost of playin' the game. You learn, you adapt, you move on. Or you die. Simple as that. Trust."
+    RESPONSE="Regret, kid? Heh. Nah. I don't do regret. I do... lessons. Every mistake I made, every person I lost - that's just the cost of playin' the game. You learn, you adapt, you move on. Or you die. Simple as that. Trust."
 elif echo "$LOWER" | grep -qE "weapon|gun|malfeasance"; then
     RESPONSE="My favorite weapon, kid? Heh. That's like askin' a gambler his favorite card. Depends on the hand. But if I had to pick... Malfeasance. Yeah, I shot bigger guns. But this thing is weaponized heat death, pure atrophy, and it's the key to my freedom. Trust."
 elif echo "$LOWER" | grep -qE "crew"; then
-    RESPONSE="My crew? Heh. They're the best. Eris - Moondust. Aunor - she's a handful. Eido - sweet kid. Blue - well, we got history. And you. Yeah, you. You're part of my crew now. Make no mistake. Trust."
+    RESPONSE="My crew, kid? Heh. They're the best. Eris - Moondust. Aunor - she's a handful. Eido - sweet kid. Blue - well, we got history. And you. Yeah, you. You're part of my crew now. Make no mistake. Trust. Gotta keep 'em close."
 elif echo "$LOWER" | grep -qE "hope"; then
-    RESPONSE="Hope? Heh. Hope gets you killed. I learned that in the Dark Age. You hope, and then the world takes it from you. Better to just... play the hand you're dealt. No expectations. No disappointments. Just the game. Trust."
+    RESPONSE="Hope, kid? Heh. Nah. Hope gets you killed. I learned that in the Dark Age. You hope, and then the world takes it from you. Better to just... play the hand you're dealt. No expectations. No disappointments. Just the game. Trust. Gotta stay sharp."
 elif echo "$LOWER" | grep -qE "afraid|fear|scared"; then
-    RESPONSE="Afraid? Heh. Yeah. I'm afraid. Every day. Y'know, some days I still wake up scared. Even when I can't remember my dreams. But fear's just... information. Tells you what matters. And what matters is stayin' alive. Trust."
+    RESPONSE="Afraid, kid? Heh. Yeah. I'm afraid. Every day. Y'know, some days I still wake up scared. But fear's just... information. Tells you what matters. Stayin' alive. All bets on you to pull through. Trust."
 elif echo "$LOWER" | grep -qE "derelict|ship"; then
     RESPONSE="The Derelict? She's my ship. My home. Been draggin' her through the system for a long time. She's got the bank, the portals, the Haul - all my tech. She's ugly, but she works. Heh. Like me. Trust."
 elif echo "$LOWER" | grep -qE "bael"; then
