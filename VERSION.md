@@ -1,5 +1,8 @@
 # Version History
 
+## v0.2.2 (2026-11-01)
+- Patch: ingested Tales of the Forgotten Vol 1; fixed conflict/pre-response/integrity scripts; updated counts
+
 ## v0.2.1 (2026-10-31)
 - Patch: README warning update, version bump
 
