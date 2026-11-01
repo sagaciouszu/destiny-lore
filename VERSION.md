@@ -16,7 +16,7 @@
 
 ## v0.0.1 (2026-10-31)
 - Initial release of the Destiny lore archive
-- 109 ingested books + 68 Drifter transcripts
+- 110 ingested books + 68 Drifter transcripts
 - Master index, quote count verification, format validation
-- 16 test/validation scripts
+- 28 test/validation scripts
 - All quotes verified against canonical transcripts

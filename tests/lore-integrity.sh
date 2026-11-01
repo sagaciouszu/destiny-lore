@@ -34,16 +34,33 @@ check "[ $TRANSCRIPTS -ge 60 ]" "Transcripts: $TRANSCRIPTS (expected 68+)"
 EMPTY=$(find "$ARCHIVE/books" "$ARCHIVE/transcripts" -name '*.md' -empty 2>/dev/null | wc -l)
 check "[ $EMPTY -eq 0 ]" "No empty files (found: $EMPTY)"
 
-# Verify index.md has book entries
-python3 - "$ARCHIVE" << 'PY'
-import os, re, sys
+# Verify index.md has book entries and every slug maps to a file
+python3 - "$ARCHIVE" << 'PYEOF'
+import os, sys
 archive = sys.argv[1]
 idx = open(os.path.join(archive, 'index.md')).read()
-entries = [l for l in idx.split('\n') if '|' in l and ('done' in l or 'partial' in l or 'pending' in l)]
+entries = []
+for l in idx.split('\n'):
+    if not l.strip().startswith('|'): continue
+    if '|' not in l: continue
+    cells = [c.strip() for c in l.strip().strip('|').split('|')]
+    if len(cells) >= 3 and cells[2] in ('done','partial','pending','in-progress'):
+        entries.append(l)
 print("  ✓ index.md has %d book entries" % len(entries))
 if len(entries) < 100:
     sys.exit(1)
-PY
+slugs = []
+for l in entries:
+    cells = [c.strip() for c in l.strip().strip('|').split('|')]
+    if len(cells) >= 2:
+        slugs.append(cells[1].removeprefix('book-'))
+files = {f[:-3] for f in os.listdir(os.path.join(archive, 'books')) if f.endswith('.md')}
+missing = [s for s in slugs if s not in files]
+if missing:
+    print("  ✗ Missing book files: %s" % missing)
+    sys.exit(1)
+print("  ✓ All %d index slugs have book files" % len(slugs))
+PYEOF
 if [ $? -eq 0 ]; then PASS=$((PASS+1)); else FAIL=$((FAIL+1)); fi
 
 echo ""

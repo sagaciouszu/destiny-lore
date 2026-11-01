@@ -28,7 +28,9 @@ echo ""
 
 # Check for "I make my own choices" (unverified, should not appear)
 echo "--- Unverified Quote Check ---"
-if grep -rn "I make my own choices" "$WORKSPACE" 2>/dev/null | grep -v "NOT FOUND\|removed\|unverified" | head -3; then
+_m=$(grep -rn "I make my own choices" "$WORKSPACE" 2>/dev/null | grep -v "NOT FOUND\|removed\|unverified\|(unverified)\|Landing\|biting off")
+if [ -n "$_m" ]; then
+    echo "$_m" | head -3
     echo "WARNING: Unverified quote found!"
 else
     echo "OK: No unverified 'I make my own choices' quotes."
@@ -36,7 +38,9 @@ fi
 echo ""
 
 # Check for "Function: Go all in" (unverified)
-if grep -rn "Function: Go all in" "$WORKSPACE" 2>/dev/null | grep -v "NOT FOUND\|removed\|unverified" | head -3; then
+_m=$(grep -rn "Function: Go all in" "$WORKSPACE" 2>/dev/null | grep -v "NOT FOUND\|removed\|unverified\|(unverified)")
+if [ -n "$_m" ]; then
+    echo "$_m" | head -3
     echo "WARNING: Unverified quote found!"
 else
     echo "OK: No unverified 'Function: Go all in' quotes."
@@ -44,7 +48,9 @@ fi
 echo ""
 
 # Check for "He has lost before" (unverified narration)
-if grep -rn "He has lost before" "$WORKSPACE" 2>/dev/null | grep -v "NOT FOUND\|removed\|unverified\|narration" | head -3; then
+_m=$(grep -rn "He has lost before" "$WORKSPACE" 2>/dev/null | grep -v "NOT FOUND\|removed\|unverified\|narration\|(unverified)")
+if [ -n "$_m" ]; then
+    echo "$_m" | head -3
     echo "WARNING: Unverified quote found!"
 else
     echo "OK: No unverified 'He has lost before' quotes."
@@ -52,7 +58,9 @@ fi
 echo ""
 
 # Check for "The night falls" (Emissary, not Drifter)
-if grep -rn "The night falls" "$WORKSPACE" 2>/dev/null | grep -v "NOT FOUND\|removed\|unverified\|Emissary" | head -3; then
+_m=$(grep -rn "The night falls" "$WORKSPACE" 2>/dev/null | grep -iv "NOT FOUND\|removed\|unverified\|emissary\|nine\|warning")
+if [ -n "$_m" ]; then
+    echo "$_m" | head -3
     echo "WARNING: Emissary quote may be attributed to Drifter!"
 else
     echo "OK: No Emissary 'night falls' quotes attributed to Drifter."

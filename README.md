@@ -3,7 +3,7 @@
 <p align="center">
   <img src='https://img.shields.io/github/v/tag/sagaciouszu/destiny-lore?label=version&color=blue' alt='Version'/>
   <img src='https://github.com/sagaciouszu/destiny-lore/actions/workflows/ci.yml/badge.svg' alt='CI'/>
-  <img src='https://img.shields.io/badge/books-109-orange' alt='Books'/>
+  <img src='https://img.shields.io/badge/books-110-orange' alt='Books'/>
   <img src='https://img.shields.io/badge/transcripts-68-orange' alt='Transcripts'/>
   <img src='https://img.shields.io/badge/quotes-473%20verified-orange' alt='Quotes'/>
   <img src='https://img.shields.io/badge/Made%20with-Motes-00FF00' alt='Made with Motes'/>
@@ -26,7 +26,7 @@ Any agent (Drifter persona, lore research, etc.) may reference these files at wi
 - `index.md` - Master book list with ingestion status (pending/done/partial).
 - `books/<slug>.md` - Full text of each ingested book, entries as `##` sections.
 - `transcripts/<slug>.md` - Transcripts (quest dialogue) as ingested.
-- `tests/` - Validation and verification scripts (25 scripts).
+- `tests/` - Validation and verification scripts (28 scripts).
 - `drifter-master-audit.sh` - Unified audit runner (stays at root).
 
 ## How to use
@@ -56,7 +56,7 @@ All content sourced from publicly available Destiny 2 lore. No original creative
 
 ## Progress
 
-109 / 109 books ingested. 68 transcripts ingested.
+110 / 110 books ingested. 68 transcripts ingested.
 Last scrape: 2026-10-30. Content through Renegades (Dec 2025).
 
 ## Audit Commands
@@ -65,7 +65,7 @@ Last scrape: 2026-10-30. Content through Renegades (Dec 2025).
 - `bash tests/drifter-module-test.sh` - module checks (201 checks)
 - `bash drifter-master-audit.sh` - unified audit (17 suites)
 - `bash tests/drifter-quote-verify.sh` - quote verification
-- `bash tests/drifter-ci.sh` - full CI pipeline (26 checks)
-- `bash tests/lore-integrity.sh` - archive integrity (9 checks)
+- `bash tests/drifter-ci.sh` - full CI pipeline (25 checks)
+- `bash tests/lore-integrity.sh` - archive integrity (8 checks)
 - `bash tests/lore-quote-count.sh` - quote count (473 lines)
 - `bash tests/lore-format.sh` - transcript format (68/68)
