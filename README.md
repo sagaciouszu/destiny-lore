@@ -1,4 +1,4 @@
-# Destiny 2 Lore Knowledge Base
+# Destiny Agent Grimoire
 
 <p align="center">
   <img src='https://img.shields.io/github/v/tag/sagaciouszu/destiny-agent-grimoire?label=version&color=blue' alt='Version'/>
@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="header.png" alt="Destiny 2 Lore - Your Ghost Is Not An Agent" width="100%"/>
+  <img src="header.png" alt="Destiny Agent Grimoire - Your Ghost Is Not An Agent" width="100%"/>
 </p>
 
 **Version:** 0.2.3 | **Status:** Development

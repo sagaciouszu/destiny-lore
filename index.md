@@ -1,4 +1,4 @@
-# Destiny 2 Lore - Master Index
+# Destiny Agent Grimoire - Master Index
 
 Ingestion status per book. Status: pending | in-progress | done | partial.
 
